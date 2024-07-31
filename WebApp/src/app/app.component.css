@@ -1,0 +1,27 @@
+.container{
+    background-color: #c3f2f7;
+    height: 800px;
+    display: flex;
+}
+.form-section{
+    margin-left: 55px;
+    padding-top: 40px;
+
+    
+    width: 50%;
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .output-section{
+    margin-top: 40px;
+  }

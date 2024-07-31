@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+  <mat-icon>health_and_safety</mat-icon>
+  <span>Diabetes Prediction</span>
+</mat-toolbar>
+<div class="container">
+  
+  
+  <div class="form-section">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Pregnancies</mat-label>
+        <input matInput placeholder="No of Pregnancies" name="Pregnancies" [(ngModel)]="diabetes.Pregnancies">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Glucose</mat-label>
+        <input matInput placeholder="Glucose Count" name="Glucose" [(ngModel)]="diabetes.Glucose">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>BloodPressure</mat-label>
+        <input matInput placeholder="BloodPressure" name="BloodPressure" [(ngModel)]="diabetes.BloodPressure">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>SkinThickness</mat-label>
+        <input matInput placeholder="SkinThickness" name="SkinThickness" [(ngModel)]="diabetes.SkinThickness">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Insulin</mat-label>
+        <input matInput placeholder="Enteer your Insulin level" name="Insulin" [(ngModel)]="diabetes.Insulin">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Body Mass Index</mat-label>
+        <input matInput placeholder="Enter your BMI" name="BMI" [(ngModel)]="diabetes.BMI">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>DiabetesPedigree</mat-label>
+        <input matInput placeholder="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" [(ngModel)]="diabetes.DiabetesPedigreeFunction">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Age</mat-label>
+        <input matInput placeholder="Enter your Age" name="Age" [(ngModel)]="diabetes.Age">
+      </mat-form-field>
+
+
+      <button mat-raised-button color="primary" type="submit" (click)="onClick()">Submit</button>
+    </form>
+  </div>
+ 
+  <div class="output-section" *ngIf="responseMessage===''">
+    <img src="assets/daibetes-checkup.jpg" alt="Diabetes Prediction" style="width: 100%; height: 65%;">
+  </div>
+  <div class="output-section" *ngIf="responseMessage==='Diabetic'">
+    <img src="assets/diabetes.jpg" alt="Diabetes Prediction" style="width: 100%; height: 65%;">
+  </div>
+  <div class="output-section" *ngIf="responseMessage==='Non-Diabetic'">
+    <img src="assets/diabetes-free.jpg" alt="Diabetes Prediction" style="width: 100%; height: 65%;">
+  </div>
+</div>
+
